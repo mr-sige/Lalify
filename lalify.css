@@ -1,0 +1,8 @@
+#lali {
+	position: fixed;
+	bottom: -362px;
+	right: 0px;
+	z-index: 1000;
+	transition: transform 3s;
+	transform: translate(0px, -362px);
+}
