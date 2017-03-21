@@ -1,8 +1,33 @@
+
+@keyframes show {
+    from {bottom: -500px;}
+    to {bottom: -50px;}
+}
+
+@keyframes keepVisible {
+    from {bottom: -50px;}
+    to {bottom: -50px;}
+}
+
+@keyframes rot {
+	0% { transform: rotate(0deg) }
+	25% { transform: rotate(-20deg) }
+	50% { transform: rotate(20deg) }
+	100% { transform: rotate(0deg) }
+}
+
+@keyframes hide {
+    from {bottom: -50px;}
+    to {bottom: -500px;}
+}
+
 #lali {
 	position: fixed;
-	bottom: -362px;
+	bottom: -500px;
 	right: 0px;
 	z-index: 1000;
-	transition: transform 3s;
-	transform: translate(0px, -362px);
+	animation-name: show, rot, keepVisible, hide;
+	animation-duration: 0.2s, 0.2s, 2s, 3s;
+	animation-timing-function: ease-out, linear, linear, linear;
+	animation-delay: 0s, 0.2s, 0.2s, 2s;
 }
